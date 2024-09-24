@@ -1,0 +1,19 @@
+appId: org.greenstand.android.TreeTracker.debug
+---
+- launchApp
+- tapOn: "Email"
+- inputText: "treetrackertest1@gmail.com"
+- tapOn: "Password"
+- inputText: "!QAZ2wsx"
+- tapOn:
+    id: "com.android.systemui:id/back"
+- tapOn: "Log In"
+- assertVisible: "Account"
+- assertVisible: "Forest Management"
+- tapOn: "Account"
+- tapOn: "Profile"
+- scrollUntilVisible:
+    element: "LOG OUT"
+    direction: "DOWN"
+- tapOn: "LOG OUT"
+- tapOn: "OK"
